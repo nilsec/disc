@@ -9,7 +9,7 @@ from torchvision.transforms import Compose
 
 def get_data_loader(root, level, split, batch_size, num_workers, prefetch_factor):
     transforms = Compose([normalize, transform_to_tensor])
-    dset = Fade(root, level, split, transform=transforms)
+    dset = Disc(root, level, split, transform=transforms)
 
     loader = DataLoader(dset,
                         batch_size=batch_size,
@@ -45,7 +45,7 @@ class Disc(Dataset):
             nts=None,
             balance=False
     ) -> None:
-        super(Fade, self).__init__()
+        super(Disc, self).__init__()
         self.root = root 
         self.transform=transform
         self.target_transform=target_transform

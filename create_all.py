@@ -1,4 +1,4 @@
-from fade.datasets import create_dataset
+from disc.datasets import create_dataset
 import os
 
 level_to_classes = {"1a": [0,1,2],
