@@ -13,7 +13,7 @@ level_to_classes = {"1a": [0,1,2],
                     "2c_s": [0,1],
                     "2d_s": [0,1]}
 
-def create_all(base_dir="/nrs/funke/ecksteinn/soma_data"):
+def create_all(base_dir="./data"):
     n = 5000
     seed = 1234
     for level, classes in level_to_classes.items():
