@@ -14,3 +14,5 @@ Create toy dataset via:
 ```console
 python create_all.py
 ```
+
+For training via pytorch use the provided dataloader at `disc/loader.py`
