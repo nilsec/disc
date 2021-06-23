@@ -34,10 +34,7 @@ def normalize(data_array):
         data_array = data_array*2.0 - 1.0
         return data_array
 
-class Fade(Dataset):
-    """   
-    Synapses dataset
-    """
+class Disc(Dataset):
     def __init__(
             self,
             root: str,
@@ -93,21 +90,3 @@ class Fade(Dataset):
 
     def __len__(self) -> int:
         return len(self.samples)
-
-    
-
-if __name__ == "__main__":
-    fade = Fade("/nrs/funke/ecksteinn/soma_data", "1b", transform=None, balance=True, split="test")
-    x,y = fade[0]
-    print(np.shape(x),y)
-    print(len(fade))
-    print(np.max(x), np.min(x), x.dtype)
-    loader = get_data_loader("/nrs/funke/ecksteinn/soma_data", "1b", "train", 16, 1, 2)
-    k = 0
-    for x,y in loader:
-        print(y)
-        print(x.dtype, x.min(), x.max())
-        k += 1
-        if k ==10:
-            break
-
