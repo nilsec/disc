@@ -11,6 +11,6 @@ pip install .
 
 ## Usage
 Create toy dataset via:
-```
+```console
 python create_all.py
-
+```
